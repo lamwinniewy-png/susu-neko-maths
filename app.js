@@ -35,7 +35,7 @@ function speak(key, opts={}) {
   showBuddy(who, opts.mood || 'idle', text);
   if (!sound) return;
   try { audio.pause(); } catch(e){}
-  audio = new Audio(`audio/${lang}_${key}.mp3`);
+  audio = new Audio(`audio/${lang}_${key}.mp3?v=2`);
   const b = $('#buddy');
   audio.onplay = () => b.classList.add('talk');
   audio.onended = audio.onpause = () => b.classList.remove('talk');
