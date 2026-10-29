@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Susu &amp; Neko 數學樂園｜二上 角和垂直線・米</title>
+<link rel="icon" href="img/susu_face.webp" type="image/webp">
+<meta name="description" content="Susu 同 Neko 陪你溫習二年級數學：角、直角、銳角、鈍角、垂直線、米和厘米。廣東話及英文版本。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Huninn&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bg" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<!-- Splash -->
+<section id="splash" class="splash">
+  <div class="splash-card">
+    <div class="splash-dolls">
+      <img src="img/susu.webp" alt="Susu" class="doll-splash s">
+      <img src="img/neko.webp" alt="Neko" class="doll-splash n">
+    </div>
+    <h1 class="splash-title"><span class="red">Susu</span> &amp; <span class="purple">Neko</span><br><small>數學樂園 Maths Playland</small></h1>
+    <p class="splash-sub">二年級上學期 ‧ 角和垂直線 ‧ 米<br>P.2 Angles &amp; Perpendicular Lines ‧ Metre</p>
+    <div class="splash-btns">
+      <button class="btn big red" data-start="zh">廣東話 開始！</button>
+      <button class="btn big purple" data-start="en">English Start!</button>
+    </div>
+    <p class="tiny">記得開聲呀 Turn on the sound</p>
+  </div>
+</section>
+
+<!-- App -->
+<div id="app" hidden>
+  <header class="topbar">
+    <button class="brand" data-go="home" aria-label="Home">
+      <img src="img/susu_face.webp" alt=""><img src="img/neko_face.webp" alt="">
+      <span>數學樂園</span>
+    </button>
+    <nav class="tabs" aria-label="Main">
+      <button data-go="home" data-i18n="nav_home"></button>
+      <button data-go="learn" data-i18n="nav_learn"></button>
+      <button data-go="games" data-i18n="nav_games"></button>
+      <button data-go="quiz" data-i18n="nav_quiz"></button>
+      <button data-go="stickers" data-i18n="nav_stickers"></button>
+    </nav>
+    <div class="tools">
+      <div class="starcount" title="Stars"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg><b id="starNum">0</b></div>
+      <button class="iconbtn" id="langBtn" aria-label="Language">EN</button>
+      <button class="iconbtn" id="sndBtn" aria-label="Sound"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="wave" d="M16 8.5a5 5 0 010 7M18.5 6a8.5 8.5 0 010 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+  </header>
+  <main id="view" tabindex="-1"></main>
+</div>
+
+<!-- Buddy (speaking doll) -->
+<div id="buddy" hidden>
+  <div class="bubble" id="bubble"><span id="bubbleText"></span><button id="replay" aria-label="Replay"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8.5a5 5 0 010 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+  <img id="buddyImg" src="img/susu.webp" alt="">
+</div>
+<div id="confetti" aria-hidden="true"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
